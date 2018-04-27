@@ -6,7 +6,7 @@
 </head>
 <body>
     <div ng-controller="MainController as main">
-        {{main.greetings}}
+        {{main.date | date:'dd/MM/yyyy HH:mm'}}
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
