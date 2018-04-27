@@ -6,9 +6,10 @@
 </head>
 <body>
     <div ng-controller="MainController as main">
-        <input type="text" nom="search" ng-model="main.filter">
+        <input type="text" ng-model="main.filter">
+        <button ng-click="main.handleClick()">Recherche</button>
         <ul>
-            <li ng-repeat="movie in main.movies | filter:main.filter">
+            <li ng-repeat="movie in main.movies | filter:main.search">
                 Title: {{movie.title}}
                 </br>
                 Year: {{movie.year}}

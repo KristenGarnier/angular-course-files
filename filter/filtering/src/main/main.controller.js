@@ -5,24 +5,28 @@ angular
 function MainController() {
 	this.movies = [
 		{
-			title: 'Jurrasic park',
-			year: 1993
+			title: 'Sharknado',
+			year: 2013
 		},
 		{
-			title: 'l\'Odyssée de l\'espace',
-			year: 1968
-		},
-		{
-			title: 'Le géant de fer',
-			year: 1995
-		},
-		{
-			title: 'Avatar',
+			title: 'Dragon ball evolution',
 			year: 2009
 		},
 		{
-			title: 'Sharknado',
-			year: 2013
+			title: 'Les tuches 3',
+			year: 2018
+		},
+		{
+			title: 'Les visiteurs',
+			year: 1993
+		},
+		{
+			title: 'Le seingeur des anneaux',
+			year: 2001
 		}
-	] // On utilise la syntaxe Controller as donc on utilise this
+	] 
+
+	this.handleClick = function() {
+		this.search = this.filter;
+	}
 }
