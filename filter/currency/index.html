@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Base app</title>
+</head>
+<body>
+    <div ng-controller="MainController as main">
+        Prix : {{main.price | currency:'€':2}}
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="src/main/main.js"></script>
+    <script src="src/main/main.controller.js"></script>
+</body>
+</html>
