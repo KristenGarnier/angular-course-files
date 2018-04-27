@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Base app</title>
+</head>
+<body>
+    <div ng-controller="MainController as main">
+        <input type="text" nom="search" ng-model="main.filter">
+        <ul>
+            <li ng-repeat="movie in main.movies | filter:main.filter">
+                Title: {{movie.title}}
+                </br>
+                Year: {{movie.year}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="src/main/main.js"></script>
+    <script src="src/main/main.controller.js"></script>
+</body>
+</html>
