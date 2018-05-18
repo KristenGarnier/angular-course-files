@@ -1,1 +1,6 @@
-<h1>{{ ctrl.name }}</h1>
+<h1>{{ctrl.name}}</h1>
+<input type="text" ng-model="ctrl.data.personnage">
+<button ng-click="ctrl.controlPersonnage()">Contrôler</button>
+<h1 ng-show="ctrl.cancer">
+    Criminel emprisonné
+</h1>

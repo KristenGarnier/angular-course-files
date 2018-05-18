@@ -14,6 +14,7 @@ angular
                 controller: 'AboutController as ctrl',
                 templateUrl: 'views/about.html'
             })
-
+            
+        
         $urlRouterProvider.otherwise('/');
     })
