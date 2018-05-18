@@ -5,11 +5,14 @@
     <title>Angular Base app</title>
 </head>
 <body>
-    <div ng-controller="MainController as main">
-        
-    </div>
+    <ul>
+        <li><button ui-sref="Home">Home</button></li>
+        <li><button ui-sref="About">About</button></li>
+    </ul>
+    <ui-view></ui-view>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
     <script src="src/main/main.js"></script>
     <script src="src/main/main.controller.js"></script>
 </body>
