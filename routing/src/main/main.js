@@ -18,3 +18,9 @@ angular
         
         $urlRouterProvider.otherwise('/');
     })
+    .run(function($rootScope) {
+        $rootScope.list = [
+            'test',
+            '123'
+        ]
+    })
