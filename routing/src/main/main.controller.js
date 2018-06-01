@@ -3,15 +3,6 @@ angular
 	.controller('MainController', MainController)
 	.controller('AboutController', AboutController)
 	.service('BrigadeAntiCancer', BrigadeAntiCancer)
-	.service('ListService', ListService)
-
-ListService.$inject = ['$rootScope']
-
-function ListService($rootScope) {
-	this.getList = function() {
-		return $rootScope.list;
-	}
-}
 
 function BrigadeAntiCancer() {
 	this.arrestation = function(personnage){
@@ -23,13 +14,12 @@ function BrigadeAntiCancer() {
 	}
 }
 
-MainController.$inject = ['BrigadeAntiCancer', 'ListService']
+MainController.$inject = ['BrigadeAntiCancer']
 
-function MainController(BrigadeAntiCancer, ListService) {
+function MainController(BrigadeAntiCancer) {
 	console.log(BrigadeAntiCancer)
 	this.name = 'Controller';
 	this.cancer = false;
-	this.list = ListService.getList();
 
 	this.controlPersonnage = function() {
 		this.cancer = BrigadeAntiCancer.arrestation(this.data.personnage)
